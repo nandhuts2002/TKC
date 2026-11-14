@@ -6,8 +6,8 @@ withDefaults(defineProps<{ light?: boolean; height?: number }>(), { height: 74 }
 
 <template>
   <span class="logo" :style="{ height: `${height}px` }" role="img" aria-label="TKC Plantations, since 1976">
-    <img class="dark" :class="{ off: light }" src="/images/logo.webp" alt="" width="640" height="746" decoding="async" fetchpriority="high" />
-    <img class="lite" :class="{ on: light }" src="/images/logo-light.webp" alt="" width="640" height="746" decoding="async" />
+    <img class="dark" :class="{ off: light }" :src="asset('/images/logo.webp')" alt="" width="640" height="746" decoding="async" fetchpriority="high" />
+    <img class="lite" :class="{ on: light }" :src="asset('/images/logo-light.webp')" alt="" width="640" height="746" decoding="async" />
   </span>
 </template>
 

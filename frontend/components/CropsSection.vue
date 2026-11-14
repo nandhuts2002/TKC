@@ -63,7 +63,7 @@ const crops = [
           @mouseleave="untilt"
         >
           <div class="img-wrap">
-            <img loading="lazy" decoding="async" :src="c.img" :alt="`TKC Plantations ${c.name}`" class="crop-img" />
+            <img loading="lazy" decoding="async" :src="asset(c.img)" :alt="`TKC Plantations ${c.name}`" class="crop-img" />
           </div>
           <div class="shade" />
 

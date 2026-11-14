@@ -69,7 +69,7 @@ onBeforeUnmount(() => ctx?.revert())
 <template>
   <section id="story" ref="root" class="story">
     <div id="about" class="anchor" />
-    <img class="st-bg" src="/images/legacy_banner.webp" alt="" loading="lazy" decoding="async" />
+    <img class="st-bg" :src="asset('/images/legacy_banner.webp')" alt="" loading="lazy" decoding="async" />
     <div class="st-shade" />
     <div class="st-glow" />
 
@@ -97,7 +97,7 @@ onBeforeUnmount(() => ctx?.revert())
             v-for="(c, i) in chapters" :key="c.year"
             class="frame" :class="[`st-photo-${i}`, c.kind]" :style="{ opacity: i === 0 ? 1 : 0 }"
           >
-            <img v-if="c.photo" :src="c.photo" :alt="c.person" loading="lazy" decoding="async" />
+            <img v-if="c.photo" :src="asset(c.photo)" :alt="c.person" loading="lazy" decoding="async" />
             <div v-else class="placeholder">
               <svg v-if="c.kind === 'portrait'" viewBox="0 0 120 150" class="sil" aria-hidden="true">
                 <circle cx="60" cy="56" r="25" /><path d="M12 150c2-34 20-50 48-50s46 16 48 50z" />

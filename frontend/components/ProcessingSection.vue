@@ -63,7 +63,7 @@ const tkc = ['Size grading', 'Selective Sortex']
         <h3>The Machines &amp; Store at the Plantation</h3>
         <div class="m-grid">
           <figure v-for="m in equipment" :key="m.title" class="mach">
-            <div class="ph"><img :src="m.src" :alt="m.title" loading="lazy" /></div>
+            <div class="ph"><img :src="asset(m.src)" :alt="m.title" loading="lazy" /></div>
             <figcaption><b>{{ m.title }}</b><span>{{ m.caption }}</span></figcaption>
           </figure>
         </div>

@@ -56,7 +56,7 @@ const fmt = (n: number) => '₹' + n.toLocaleString('en-IN')
           data-reveal
         >
           <div class="img-frame">
-            <img loading="lazy" decoding="async" :src="p.img" :alt="p.name" class="prod-img" />
+            <img loading="lazy" decoding="async" :src="asset(p.img)" :alt="p.name" class="prod-img" />
           </div>
 
           <div class="meta">

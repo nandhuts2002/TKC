@@ -22,7 +22,7 @@ onMounted(async () => {
 
   // make sure the hero photo is ready before we lift the curtain
   const img = new Image()
-  img.src = '/images/hero_plantation.webp'
+  img.src = asset('/images/hero_plantation.webp')
   const heroReady = Promise.race([img.decode().catch(() => {}), wait(4500)])
 
   const grow = gsap.timeline()
@@ -55,8 +55,8 @@ onBeforeUnmount(() => {
   <div v-if="!gone" ref="root" class="tkc-intro" aria-hidden="true">
     <div class="lg-inner">
       <div class="lg-logo">
-        <img class="lg-dim" src="/images/logo-light.webp" alt="" width="640" height="746" />
-        <img class="lg-fill" src="/images/logo-light.webp" alt="" width="640" height="746" />
+        <img class="lg-dim" :src="asset('/images/logo-light.webp')" alt="" width="640" height="746" />
+        <img class="lg-fill" :src="asset('/images/logo-light.webp')" alt="" width="640" height="746" />
       </div>
       <p class="lg-tag">Rooted in Tradition. Growing with Nature.</p>
       <div class="lg-bar"><span /></div>

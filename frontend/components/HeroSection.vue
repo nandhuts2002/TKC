@@ -46,7 +46,7 @@ onBeforeUnmount(() => ctx?.revert())
     <!-- Full-bleed Plantation Landscape Photo matching Mockup -->
     <div class="hero-bg-wrap">
       <img
-        src="/images/hero_plantation.webp"
+        :src="asset('/images/hero_plantation.webp')"
         fetchpriority="high"
         decoding="async"
         alt="TKC Plantations in the misty hills of Idukki Kerala"

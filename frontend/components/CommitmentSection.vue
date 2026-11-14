@@ -5,7 +5,7 @@
         <!-- Panoramic Golden Landscape of Plantation Hills -->
         <div class="landscape-wrap">
           <img loading="lazy" decoding="async"
-            src="/images/commitment_landscape.webp"
+            :src="asset('/images/commitment_landscape.webp')"
             alt="Misty golden plantation hills of Idukki"
             class="landscape-img"
           />

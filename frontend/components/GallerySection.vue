@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
 
       <div class="grid">
         <button v-for="(it, i) in items" :key="it.src" class="tile" :aria-label="`View ${it.title}`" @click="open(i)">
-          <img :src="it.src" :alt="it.title" loading="lazy" />
+          <img :src="asset(it.src)" :alt="it.title" loading="lazy" />
           <span class="cap"><b>{{ it.title }}</b><small>{{ it.group }}</small></span>
         </button>
       </div>
@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
         <button class="x" aria-label="Close" @click="close"><Icon name="close" :size="26" /></button>
         <button class="nav prev" aria-label="Previous" @click="step(-1)"><Icon name="arrow" :size="24" /></button>
         <figure>
-          <img :src="items[current].src" :alt="items[current].title" />
+          <img :src="asset(items[current].src)" :alt="items[current].title" />
           <figcaption><b>{{ items[current].title }}</b><span>{{ items[current].caption }}</span></figcaption>
         </figure>
         <button class="nav next" aria-label="Next" @click="step(1)"><Icon name="arrow" :size="24" /></button>

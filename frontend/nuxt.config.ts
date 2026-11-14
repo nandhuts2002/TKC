@@ -1,8 +1,12 @@
+// GitHub Pages serves a project site from /<repo>/; the workflow sets NUXT_APP_BASE_URL.
+const base = process.env.NUXT_APP_BASE_URL || '/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
   devtools: { enabled: false },
   css: ['~/assets/css/main.css'],
   app: {
+    baseURL: base,
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'TKC Plantations | Premium Cardamom, Pepper & Coffee from Idukki, Kerala',
@@ -16,7 +20,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#1c4a2a' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/png', href: `${base}favicon.png` },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {

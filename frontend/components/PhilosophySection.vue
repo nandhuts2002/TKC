@@ -23,14 +23,14 @@ const pillars = [
     <!-- Botanical Branch Artwork on Left & Right Margins matching mockup -->
     <div class="botanical-wrap botanical-left" aria-hidden="true">
       <img loading="lazy" decoding="async"
-        src="/images/botanical_cutout.webp"
+        :src="asset('/images/botanical_cutout.webp')"
         alt=""
         class="botanical-img"
       />
     </div>
     <div class="botanical-wrap botanical-right" aria-hidden="true">
       <img loading="lazy" decoding="async"
-        src="/images/botanical_cutout.webp"
+        :src="asset('/images/botanical_cutout.webp')"
         alt=""
         class="botanical-img"
       />
