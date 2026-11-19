@@ -39,6 +39,7 @@ onMounted(() => {
       <TrustStrip />
       <StorySection />
       <CropsSection />
+      <CardamomBurst />
       <ProcessingSection />
       <GallerySection />
       <LocationSection />
